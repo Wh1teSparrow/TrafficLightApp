@@ -17,39 +17,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tpz-PF-FpI">
+                                <rect key="frame" x="121" y="125" width="151" height="469"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GMB-7w-x7Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="151" height="151"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hvH-EQ-KZ0">
+                                        <rect key="frame" x="0.0" y="159" width="151" height="151"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znv-sZ-aXs">
+                                        <rect key="frame" x="0.0" y="318" width="151" height="151"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hvH-EQ-KZ0" firstAttribute="centerY" secondItem="tpz-PF-FpI" secondAttribute="centerY" id="SUO-Cj-Pg9"/>
+                                    <constraint firstItem="hvH-EQ-KZ0" firstAttribute="top" secondItem="tpz-PF-FpI" secondAttribute="top" constant="159" id="Zqx-Cp-yrb"/>
+                                </constraints>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zw-h3-0Jh">
-                                <rect key="frame" x="121" y="742" width="151" height="60"/>
+                                <rect key="frame" x="131.66666666666666" y="698" width="129.99999999999997" height="60"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="hWX-15-TdP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="lightButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="1DU-yo-Vaj"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GMB-7w-x7Q">
-                                <rect key="frame" x="121" y="122" width="151" height="151"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hvH-EQ-KZ0">
-                                <rect key="frame" x="121" y="281" width="151" height="151"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="znv-sZ-aXs">
-                                <rect key="frame" x="121" y="440" width="151" height="151"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8zw-h3-0Jh" secondAttribute="bottom" constant="16" id="12g-1b-K04"/>
-                            <constraint firstItem="8zw-h3-0Jh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="aLn-ft-O8c"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8zw-h3-0Jh" secondAttribute="trailing" constant="121" id="yF8-rB-Km4"/>
+                            <constraint firstItem="8zw-h3-0Jh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZWv-hB-Auu"/>
+                            <constraint firstItem="tpz-PF-FpI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="aff-dv-lx9"/>
+                            <constraint firstItem="8zw-h3-0Jh" firstAttribute="top" secondItem="tpz-PF-FpI" secondAttribute="bottom" constant="104" id="lVO-iT-lYr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8zw-h3-0Jh" secondAttribute="bottom" constant="60" id="uFZ-Ia-ZOV"/>
+                            <constraint firstItem="tpz-PF-FpI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="v56-qR-Orm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tpz-PF-FpI" secondAttribute="trailing" constant="121" id="zDW-V9-Jm7"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="greenLight" destination="znv-sZ-aXs" id="FaT-b8-snk"/>
+                        <outlet property="lightButton" destination="8zw-h3-0Jh" id="WzJ-XT-ee4"/>
                         <outlet property="redLight" destination="GMB-7w-x7Q" id="ALw-hB-T6k"/>
                         <outlet property="yellowLight" destination="hvH-EQ-KZ0" id="3tc-38-7Rx"/>
                     </connections>
@@ -61,10 +77,10 @@
     </scenes>
     <resources>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
