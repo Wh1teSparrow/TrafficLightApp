@@ -18,10 +18,26 @@ class ViewController: UIViewController {
         redLight.layer.cornerRadius = 75
         yellowLight.layer.cornerRadius = 75
         greenLight.layer.cornerRadius = 75
-        lightButton.layer.cornerRadius = 10
+        lightButton.layer.cornerRadius = 30
         redLight.alpha = 0.3
         yellowLight.alpha = 0.3
         greenLight.alpha = 0.3
+    }
+    
+    @IBAction func lightButtonPressed() {
+        if redLight.alpha != 1 { redLight.alpha = 1
+            lightButton.setTitle("NEXT", for: .normal)
+        } else if yellowLight.alpha != 1 {
+            yellowLight.alpha = 1
+        } else if greenLight.alpha != 1 {
+            greenLight.alpha = 1
+            lightButton.setTitle("OFF", for: .normal)
+        } else {
+            redLight.alpha = 0.3
+            yellowLight.alpha = 0.3
+            greenLight.alpha = 0.3
+            lightButton.setTitle("START", for: .normal)
+        }
     }
 }
 
