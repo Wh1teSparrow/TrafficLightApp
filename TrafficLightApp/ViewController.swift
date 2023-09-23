@@ -25,9 +25,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func lightButtonPressed() {
-        if redLight.alpha != 1 { redLight.alpha = 1
+        if redLight.alpha != 1 {
+            redLight.alpha = 1
             lightButton.setTitle("NEXT", for: .normal)
         } else if yellowLight.alpha != 1 {
+            redLight.alpha = 0.3
             yellowLight.alpha = 1
         } else if greenLight.alpha != 1 {
             greenLight.alpha = 1
